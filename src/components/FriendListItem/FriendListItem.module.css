@@ -1,0 +1,23 @@
+.avatar {
+  width: 80px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.isOnline {
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.isOffline {
+  composes: isOnline;
+  color: red;
+}
+
+.item {
+  padding: 20px;
+}

@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding-top: 50px;
+}
+
+.title {
+  font-size: 62px;
+  background: -webkit-linear-gradient(#dca7ff, #3f5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 192px;
+}
+
+.profile {
+  width: 300px;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--borderWidth);
+  --borderWidth: 5px;
+  background: hsl(0, 0%, 100%);
+  position: relative;
+}
+
+.profile:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.avatar {
+  margin-top: 20px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: rgb(40, 40, 40);
+}
+
+.name {
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.tag {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: rgb(93, 93, 93);
+}
+
+.location {
+  margin-top: 0;
+  font-size: 16px;
+  color: rgb(93, 93, 93);
+}
+
+.stats {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #899bff;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 2px solid #556fff;
+  border-right: 2px solid #556fff;
+  padding: 9px;
+}
+
+.item:last-child {
+  border-right: none;
+}
+
+.label {
+  color: #252525;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.value {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
